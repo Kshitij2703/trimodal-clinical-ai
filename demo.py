@@ -281,7 +281,32 @@ def predict(modality, image, lateral_image, report_text, age, sex, localization,
             for i, h in enumerate(hits, 1):
                 label = h.get('dx', h['label'])
                 id_   = h.get('id', '—')
-                match = "✅" if label == (pred[0] if isinstance(pred, list) else pred) else "❌"
+                # dx labels are 7-class (nv, mel, bcc etc); map to binary for skin
+                MALIGNANT_DX = {'mel', 'bcc', 'akiec'}
+                def _to_binary(lbl):
+                    if lbl in MALIGNANT_DX: return 'malignant'
+                    if lbl in {'nv','bkl','df','vasc'}: return 'benign'
+                    return str(lbl)
+                pred_str = pred[0] if isinstance(pred, list) else pred
+                # X-Ray: labels are numpy arrays [0,1,0,...] — convert to readable
+                if modality == 'xray':
+                    XRAY_LABELS_LOCAL = ["Atelectasis","Cardiomegaly","Consolidation",
+                                         "Edema","Effusion","Emphysema","Pneumonia","Pneumothorax"]
+                    try:
+                        arr = [int(float(x)) for x in label] if hasattr(label, '__iter__') and not isinstance(label, str) else []
+                        label_str = ', '.join([XRAY_LABELS_LOCAL[i] for i,v in enumerate(arr) if v==1]) or 'Normal'
+                    except Exception:
+                        label_str = str(label)
+                    # match: check if any predicted finding appears in retrieved case
+                    retrieved_findings = set(label_str.split(', '))
+                    predicted_findings = set(pred) if isinstance(pred, list) else {pred}
+                    match = "✅" if retrieved_findings & predicted_findings else "❌"
+                    label = label_str
+                elif modality == 'skin':
+                    retrieved_label = _to_binary(label)
+                    match = "✅" if retrieved_label == pred_str else "❌"
+                else:
+                    match = "✅" if str(label) == pred_str else "❌"
                 hdc_lines.append(f"  {i}. {match} `{id_}` → **{label}** (distance: {h['distance']})")
             hdc_text = "\n".join(hdc_lines)
         except Exception as e:
