@@ -1,0 +1,51 @@
+================================================================================
+TRIMODAL CLINICAL AI — RUN COMMANDS
+================================================================================
+
+SETUP (first time only)
+------------------------
+cd /Users/kshitijnavale/Desktop/Xray
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements_local.txt
+
+--------------------------------------------------------------------------------
+RUN GRADIO DEMO
+--------------------------------------------------------------------------------
+
+# Foreground (shows logs, stop with Ctrl+C)
+cd /Users/kshitijnavale/Desktop/Xray
+.venv/bin/python demo.py
+
+# Background (silent)
+.venv/bin/python demo.py &
+
+# Open in browser
+open http://localhost:7860
+
+--------------------------------------------------------------------------------
+RUN AGENT DIRECTLY (command line)
+--------------------------------------------------------------------------------
+
+# MRI
+.venv/bin/python agent.py mri samples/Te-no_1.jpg
+.venv/bin/python agent.py mri samples/Tr-pi_1018.jpg
+
+# Skin
+.venv/bin/python agent.py skin samples/ISIC_0024364.jpg
+.venv/bin/python agent.py skin samples/ISIC_0024306.jpg
+
+# X-Ray (single view — lateral defaults to same image)
+.venv/bin/python agent.py xray <frontal.jpg>
+
+--------------------------------------------------------------------------------
+MANAGE THE DEMO PROCESS
+--------------------------------------------------------------------------------
+
+# Check if running
+pgrep -f demo.py && echo "running" || echo "not running"
+
+# Kill
+kill $(pgrep -f demo.py)
+
+================================================================================
