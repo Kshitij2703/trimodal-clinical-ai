@@ -1,0 +1,103 @@
+{
+  "uid": "516",
+  "predictions": {
+    "Atelectasis": 0.1012435182929039,
+    "Cardiomegaly": 0.18220366537570953,
+    "Consolidation": 0.2907649874687195,
+    "Edema": 0.2686651349067688,
+    "Effusion": 0.5634258985519409,
+    "Emphysema": 0.07456852495670319,
+    "Pneumonia": 0.13773971796035767,
+    "Pneumothorax": 0.5440751910209656
+  },
+  "ground_truth": {
+    "Atelectasis": 0,
+    "Cardiomegaly": 0,
+    "Consolidation": 0,
+    "Edema": 0,
+    "Effusion": 0,
+    "Emphysema": 0,
+    "Pneumonia": 0,
+    "Pneumothorax": 0
+  },
+  "metadata": {
+    "View Position": "Lateral",
+    "Metadata Vector": [
+      0.0,
+      0.0
+    ]
+  },
+  "top_bert_tokens": [
+    [
+      "acute",
+      0.019189368933439255
+    ],
+    [
+      "normal",
+      0.01579473353922367
+    ],
+    [
+      "abnormal",
+      0.013716518878936768
+    ],
+    [
+      "heart",
+      0.009757177904248238
+    ],
+    [
+      "right",
+      0.0063910409808158875
+    ],
+    [
+      "focal",
+      0.006013992242515087
+    ]
+  ],
+  "similar_cases": [
+    {
+      "uid": "3104",
+      "labels": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "similarity": 76.1,
+      "hamming_distance": 979
+    },
+    {
+      "uid": "2785",
+      "labels": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "similarity": 75.2,
+      "hamming_distance": 1016
+    },
+    {
+      "uid": "57",
+      "labels": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "similarity": 75.12,
+      "hamming_distance": 1019
+    }
+  ]
+}

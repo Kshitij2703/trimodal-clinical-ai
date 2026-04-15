@@ -1,0 +1,119 @@
+{
+  "uid": "3590",
+  "predictions": {
+    "Atelectasis": 0.2086963802576065,
+    "Cardiomegaly": 0.317094087600708,
+    "Consolidation": 0.8050597906112671,
+    "Edema": 0.9485511779785156,
+    "Effusion": 0.8300787210464478,
+    "Emphysema": 0.06900069117546082,
+    "Pneumonia": 0.12477301806211472,
+    "Pneumothorax": 0.37042850255966187
+  },
+  "ground_truth": {
+    "Atelectasis": 0,
+    "Cardiomegaly": 0,
+    "Consolidation": 1,
+    "Edema": 1,
+    "Effusion": 1,
+    "Emphysema": 0,
+    "Pneumonia": 0,
+    "Pneumothorax": 1
+  },
+  "metadata": {
+    "View Position": "Lateral",
+    "Metadata Vector": [
+      0.0,
+      0.0
+    ]
+  },
+  "top_bert_tokens": [
+    [
+      "acute",
+      0.05196213722229004
+    ],
+    [
+      "heart",
+      0.01818464696407318
+    ],
+    [
+      "size",
+      0.009089513681828976
+    ],
+    [
+      "stable",
+      0.009051453322172165
+    ],
+    [
+      "within",
+      0.006033008918166161
+    ],
+    [
+      "seen",
+      0.005981226917356253
+    ],
+    [
+      "typical",
+      0.0056075286120176315
+    ],
+    [
+      "normal",
+      0.004658472258597612
+    ],
+    [
+      "consolidation",
+      0.004624233581125736
+    ],
+    [
+      "definite",
+      0.004461660049855709
+    ]
+  ],
+  "similar_cases": [
+    {
+      "uid": "937",
+      "labels": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "similarity": 85.33,
+      "hamming_distance": 601
+    },
+    {
+      "uid": "3548",
+      "labels": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "similarity": 84.72,
+      "hamming_distance": 626
+    },
+    {
+      "uid": "43",
+      "labels": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "similarity": 84.42,
+      "hamming_distance": 638
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "uid": "3080",
+  "predictions": {
+    "Atelectasis": 0.5592278242111206,
+    "Cardiomegaly": 0.26505598425865173,
+    "Consolidation": 0.22499123215675354,
+    "Edema": 0.17360252141952515,
+    "Effusion": 0.3216397762298584,
+    "Emphysema": 0.6290484666824341,
+    "Pneumonia": 0.3124822676181793,
+    "Pneumothorax": 0.2537548840045929
+  },
+  "ground_truth": {
+    "Atelectasis": 0,
+    "Cardiomegaly": 0,
+    "Consolidation": 0,
+    "Edema": 0,
+    "Effusion": 0,
+    "Emphysema": 0,
+    "Pneumonia": 0,
+    "Pneumothorax": 0
+  },
+  "metadata": {
+    "View Position": "Lateral",
+    "Metadata Vector": [
+      0.0,
+      0.0
+    ]
+  },
+  "top_bert_tokens": [
+    [
+      "remains",
+      0.05966496467590332
+    ],
+    [
+      "unchanged",
+      0.04014931246638298
+    ],
+    [
+      "decreased",
+      0.03981505706906319
+    ],
+    [
+      "decreasing",
+      0.03198239952325821
+    ],
+    [
+      "cavity",
+      0.026268411427736282
+    ],
+    [
+      "right",
+      0.01691344752907753
+    ],
+    [
+      "cavity",
+      0.01680981181561947
+    ],
+    [
+      "lobe",
+      0.009956910274922848
+    ],
+    [
+      "disease",
+      0.009393123909831047
+    ],
+    [
+      "size",
+      0.008886624127626419
+    ],
+    [
+      "upper",
+      0.00835820846259594
+    ],
+    [
+      "bilateral",
+      0.007353096269071102
+    ],
+    [
+      "bull",
+      0.007324165664613247
+    ]
+  ],
+  "similar_cases": [
+    {
+      "uid": "3379",
+      "labels": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "similarity": 76.46,
+      "hamming_distance": 964
+    },
+    {
+      "uid": "1754",
+      "labels": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "similarity": 74.98,
+      "hamming_distance": 1025
+    },
+    {
+      "uid": "845",
+      "labels": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "similarity": 74.73,
+      "hamming_distance": 1035
+    }
+  ]
+}
