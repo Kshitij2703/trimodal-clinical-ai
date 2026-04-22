@@ -1,5 +1,5 @@
 """
-TRI-MODAL NEUROSYMBOLIC CLINICAL AI — Training v4 Final
+TRI-MODAL NEUROSYMBOLIC CLINICAL AI 
 
 ARCHITECTURE:
   - EfficientNet-B0 vision backbone (1280-dim, lightweight)
@@ -28,8 +28,8 @@ ANTI-OVERFITTING:
 """
 
 import os
-os.environ["TOKENIZERS_PARALLELISM"] = "false"  # must be before ALL imports
-os.environ["CUDA_VISIBLE_DEVICES"]    = "0"      # force GPU 0, not GPU 1
+os.environ["TOKENIZERS_PARALLELISM"] = "false"  
+os.environ["CUDA_VISIBLE_DEVICES"]    = "0"     
 
 import numpy as np
 import pandas as pd

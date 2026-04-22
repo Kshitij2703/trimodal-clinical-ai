@@ -1,0 +1,81 @@
+Test samples: 554
+Embedding shape: (554, 256)
+============================================================
+Temperature: 1.4415
+
+--- WITHOUT TEMPERATURE SCALING ---
+
+Overall Metrics:
+  Mean AUC        : 0.9416
+  F1 Macro        : 0.6964
+  F1 Micro        : 0.8217
+  F1 Weighted     : 0.8353
+  Precision Macro : 0.6235
+  Recall Macro    : 0.8278
+  Accuracy        : 0.9014
+
+Per-Class AUC:
+  Atelectasis    : 0.9506
+  Cardiomegaly   : 0.9686
+  Consolidation  : 0.9088
+  Edema          : 0.9558
+  Effusion       : 0.9373
+  Emphysema      : 0.9374
+  Pneumonia      : 0.9387
+  Pneumothorax   : 0.9354
+
+--- WITH TEMPERATURE SCALING ---
+
+Overall Metrics:
+  Mean AUC        : 0.9416
+  F1 Macro        : 0.6964
+  F1 Micro        : 0.8217
+  F1 Weighted     : 0.8353
+  Precision Macro : 0.6235
+  Recall Macro    : 0.8278
+  Accuracy        : 0.9014
+
+Per-Class AUC:
+  Atelectasis    : 0.9506
+  Cardiomegaly   : 0.9686
+  Consolidation  : 0.9088
+  Edema          : 0.9558
+  Effusion       : 0.9373
+  Emphysema      : 0.9374
+  Pneumonia      : 0.9387
+  Pneumothorax   : 0.9354
+
+============================================================
+ - Completed in 1.305s
+
+> 
+
+## Model Evaluation Results
+
+Test Set: 554 samples
+
+### Overall Metrics
+
+| Metric | Value |
+|--------|-------|
+| Mean AUC | 0.9416 |
+| F1 Macro | 0.6964 |
+| F1 Micro | 0.8217 |
+| F1 Weighted | 0.8353 |
+| Precision Macro | 0.6235 |
+| Recall Macro | 0.8278 |
+| Accuracy | 0.9014 |
+| Temperature | 1.4415 |
+
+### Per-Class AUC
+
+| Class | AUC |
+|-------|-----|
+| Cardiomegaly | 0.9686 |
+| Edema | 0.9558 |
+| Atelectasis | 0.9506 |
+| Consolidation | 0.9088 |
+| Pneumonia | 0.9387 |
+| Emphysema | 0.9374 |
+| Effusion | 0.9373 |
+| Pneumothorax | 0.9354 |
